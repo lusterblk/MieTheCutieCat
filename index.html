@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mie's portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/3d85b043cc.js" crossorigin="anonymous"></script>
+    </head> 
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <h1> Hi, I'm <span>Mie </span><br>from Vietnam!</h1>
+                </div>
+            </div>
+        </div>
+        <!-- ------------about-------- -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/user.png">
+                    </div>    
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About me</h1>
+                        <p>I am an awesome cat, and I just celebrated my 4th birthday a week ago! 
+                        Ngan got me as a birthday gift four years ago, and we have been living together ever since. 
+                        I am a true introvert, do not like going outside and am not very friendly. 
+                        My favorite food is grass and the pate that Ngan makes for me.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Web app Development</li>
+                                <li><span>App Development</span><br>Building Android/IOS apps</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2021-current</span><br>dvvfgsugjakhf</li>
+                                <li><span>2019-2021</span><br>dfggfhhhifjhf</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2015-2019</span><br>Hanoi University of civil engineering</li>
+                            </ul>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    <!-- ----------------services----------------- -->   
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>Web Design</h2>
+                    <p>since u cant know if it s your code bug or it not reloading</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                    <h2>House Design</h2>
+                    <p>buit it grammatically corect</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-heart"></i>
+                    <h2>App Design</h2>
+                    <p>only highlight your achivements</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------portfolio----------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work1.png">
+                </div>
+                <div class="work">
+                    <img src="images/work2.png">
+                </div>
+                <div class="work">
+                    <img src="images/work3.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for(tablink of tablinks) 
+                tablink.classList.remove("active-link")
+            for(tabcontent of tabcontents) 
+                tabcontent.classList.remove("active-tab")
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script> 
+    </body>
+</html>
